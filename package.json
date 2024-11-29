@@ -19,9 +19,7 @@
     "react-scripts": "^5.0.1",
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
-  },
-  "homepage": "https://RedQQueen.github.io/Netflix/",
-  "scripts": {
+  },  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
