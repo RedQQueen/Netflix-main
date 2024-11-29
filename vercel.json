@@ -5,10 +5,18 @@
       "use": "@vercel/static"
     }
   ],
-   "rewrites": [
+  "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
+    }
+  ],
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:slug",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
