@@ -1,0 +1,15 @@
+{
+  "editor.codeActionsOnSave": { "source.addMissingImports": "always" },
+  "liveServer.settings.port": 5501,
+  "editor.snippetSuggestions": "top",
+  "cSpell.words": [
+    "getmoviesbygenres",
+    "listref",
+    "reduxjs",
+    "signup",
+    "TMBD",
+    "TMDB",
+    "webp"
+  ],
+  "git.ignoreLimitWarning": true
+}
