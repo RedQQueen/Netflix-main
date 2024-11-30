@@ -7,10 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const uri = process.env.MONGODB_URI;
 mongoose
-  .connect(
-    "mongodb+srv://RedQQueen:Lovely101@netlflix-clone.b1vzfdc.mongodb.net/netflix-clone"
-  )
+  .connect(uri)
   .then(() => console.log("DB Connected Ah Successfully"))
   .catch((err) => {
     console.log(err.message);
@@ -18,4 +17,5 @@ mongoose
 
 app.use("/api/user", userRoutes);
 
-app.listen(5000, () => console.log("server started"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));
