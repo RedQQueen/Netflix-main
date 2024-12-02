@@ -65,6 +65,7 @@ export default function Navbar({ isScrolled }) {
             />
           </div>
           <button
+            className="sign-out-button"
             onClick={() => {
               signOut(firebaseAuth);
             }}
@@ -133,9 +134,10 @@ const Container = styled.div`
         justify-content: center;
         padding: 0.2rem;
         padding-left: 0.5rem;
-        button {
+          button {
           background-color: transparent;
           border: none;
+          cursor: pointer;
           &:focus {
             outline: none;
           }
@@ -160,13 +162,18 @@ const Container = styled.div`
       .show-search {
         border: 1px solid white;
         background-color: rgba(0,0,0,0.6);
+        cursor: pointer;
         input {
           width: 100%;
           opacity: 1;
           visibility: visible;
           padding: 0.3rem;
         }
+    
     }
+     .sign-out-button {
+        cursor: pointer;
+      }
     }
   }
 `;
