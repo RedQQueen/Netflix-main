@@ -19,9 +19,6 @@ export default function TV() {
   const tvShows = useSelector((state) => state.netflix.tvShows);
   const tvShowsGenres = useSelector((state) => state.netflix.tvShowsGenres);
 
-  console.log(tvShows);
-  console.log(tvShowsGenres);
-
   useEffect(() => {
     dispatch(getGenresForTvShows());
     dispatch(getTvShows());

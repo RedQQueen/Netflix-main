@@ -13,7 +13,7 @@ export default React.memo(function CardSlider({
   const [showControls, setShowControls] = useState(false);
   const [sliderPosition, setSliderPosition] = useState(0);
   const listRef = useRef();
-  console.log("CardSlider data prop updated:", data);
+  // console.log("CardSlider data prop updated:", data);
 
   const handleDirection = (direction) => {
     let distance = listRef.current.getBoundingClientRect().x - 100;
@@ -31,10 +31,6 @@ export default React.memo(function CardSlider({
       setSliderPosition(sliderPosition + 1);
     }
   };
-
-  useEffect(() => {
-    console.log("CardSlider data prop updated:", data); // Check if removed items are reflected here
-  }, [data]);
 
   return (
     <Container
@@ -57,8 +53,6 @@ export default React.memo(function CardSlider({
         </div>
         <div className="flex slider" ref={listRef}>
           {data?.map((item, index) => {
-            // console.log(item);
-
             const posterPath =
               item.poster_path ||
               item.backdrop_path ||

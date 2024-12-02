@@ -31,7 +31,7 @@ export default function Navbar({ isScrolled }) {
       <nav className={`flex ${isScrolled ? "scrolled" : ""}`}>
         <div className="left flex a-center">
           <div className="brand flex a-center j-center">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" onClick={() => navigate("/")} />
           </div>
           <ul className="links flex a-center">
             {links.map(({ name, link }) => {
@@ -98,6 +98,7 @@ const Container = styled.div`
       .brand {
         img {
           height: 4rem;
+          cursor: pointer;
         }
       }
       .links {

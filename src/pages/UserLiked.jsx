@@ -16,7 +16,7 @@ export default function UserLiked() {
   const dispatch = useDispatch();
 
   const likedMedia = useSelector((state) => state.netflix.likedMedia);
-  console.log(likedMedia);
+  // console.log(likedMedia);
   const likedMoviesOnly = likedMedia
     .filter((item) => item.mediaType === "movie")
     .map((item) => item.mediaDetails);
