@@ -28,11 +28,8 @@ export default React.memo(function Card({
   const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
   const [email, setEmail] = useState(undefined);
-  // console.log(currentUsername);
-  // console.log(data.markedBy);
+
   const canEdit = data.markedBy === currentUser || currentUsername;
-  // console.log("canEdit:", canEdit);
-  // console.log("data.mediaId", data.mediaId);
 
   useEffect(() => {
     onAuthStateChanged(firebaseAuth, (currentUser) => {
@@ -41,9 +38,7 @@ export default React.memo(function Card({
       } else navigate("/login");
     });
   }, [navigate]);
-  // useEffect(() => {
-  //   console.log("CardSlider data prop updated:", data);
-  // }, [data]);
+
   const addToList = async () => {
     try {
       const mediaType = data.title ? "movie" : "tv";

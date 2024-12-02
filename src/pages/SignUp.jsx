@@ -43,7 +43,7 @@ export default function SignUp() {
     <Container className="flex a-center j-center" showPassword={showPassword}>
       <BackgroundImage />
       <div className="content">
-        <Header />
+        <Header login={false} />
         <div className="body flex column a-center j-center">
           <div className="text flex column">
             <h1>Unlimited Movies, TV Shows and more...</h1>

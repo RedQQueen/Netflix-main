@@ -3,15 +3,19 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 
-export default function Header(props) {
+export default function Header({ login }) {
+  const handleButtonClick = () => {
+    // If on login page, navigate to signup and vice di versa
+    navigate(login ? "/signup" : "/login");
+  };
   const navigate = useNavigate();
   return (
     <Container className="flex a-center j-between">
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
-      <button onClick={() => navigate(props.login ? "/login" : "/signup")}>
-        {props.login ? "Log In" : "Sign In"}
+      <button onClick={handleButtonClick}>
+        {login ? "Sign Up" : "Log In"}
       </button>
     </Container>
   );
